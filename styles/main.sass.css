@@ -1,0 +1,17 @@
+.nav-container {
+  height: 3em;
+  background: black; }
+
+.home {
+  font-size: 2em;
+  float: left;
+  color: white;
+  padding-top: .2em;
+  padding-left: .3em; }
+
+.button {
+  font-size: 2em;
+  float: right;
+  padding-top: .2em;
+  padding-right: .3em;
+  color: white; }
