@@ -23,7 +23,8 @@ module.exports = React.createClass({
 			</div>
 		);
 	},
-	calculate: function() {
+	calculate: function(e) {
+		e.preventDefault();
 		var checked = document.getElementById('checkBox').checked;
 		var tax = null
 		var total = null
@@ -32,14 +33,14 @@ module.exports = React.createClass({
 		if (isNaN(price)) {
 			window.alert('Please enter a valid number between 1 and infinity. If you have time stop at the gift shop');
 		}else if (!checked) {
-			tax = price*.055;
+			tax = +price*.055;
 			console.log(price);
 			console.log(tax);
 			total = (+tax+ +price);
 			console.log(total);
 			totalDiv.innerHTML = 'Your subtotal is $' + price + ' the tax alone is $' + tax + ' your total cost for this item is $' + total;
 		}else {
-			tax = price;
+			tax = +price*.1;
 			console.log(price);
 			console.log(tax);
 			total = (+tax+ +price);
